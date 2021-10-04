@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import banner from '../images/bg1.jpg'
+import Head from 'next/head'
 
 function banner1() {
   return (

@@ -80,7 +80,7 @@ export default function CreateItem() {
   return (
     <div className="flex justify-center">
       <Head>
-        <title>Create New NFT - AfricaNFT</title>
+        <title>Lazy Mint Asset - AfricaNFT</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="w-1/2 flex flex-col pb-12" >
@@ -95,7 +95,7 @@ export default function CreateItem() {
           onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
         />
         <input
-          placeholder="Asset Price in MATIC"
+          placeholder="Asset IPFS Hash"
           className="mt-2 border rounded p-4"
           onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
         />
@@ -111,7 +111,7 @@ export default function CreateItem() {
           )
         }
         <button onClick={createMarket} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-          Create Digital Asset
+          Lazy Mint Asset
         </button>
       </div>
     </div>
