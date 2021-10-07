@@ -5,8 +5,11 @@ import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 import Head from 'next/head'
+import { NFTStorage, File } from 'nft.storage'
 
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
+const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDA4Zjc4ODAwMkUzZDAwNEIxMDI3NTFGMUQ0OTJlNmI1NjNFODE3NmMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYzMzUxNTg0MjYyNywibmFtZSI6ImFmcmljYW5mdCJ9.tZcmCyUJ3JQaPzFXw_zWWtJhzBi3B_gXXb27cMj826Y'
+const client2 = new NFTStorage({ token: apiKey })
 
 import {
   nftaddress, nftmarketaddress
@@ -42,6 +45,13 @@ export default function CreateItem() {
     const data = JSON.stringify({
       name, description, image: fileUrl
     })
+    const metadata = await client2.store({
+      name: formInput.name,
+      description: formInput.description,
+      image: new File([/* data */], 'asset1.jpg', { type: 'image/jpg' })
+  
+    })
+    console.log(metadata.url)
     try {
       const added = await client.add(data)
       const url = `https://ipfs.infura.io/ipfs/${added.path}`
