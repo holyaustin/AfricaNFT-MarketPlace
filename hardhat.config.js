@@ -11,7 +11,7 @@ module.exports = {
       chainId: 1337
     },
     mumbai: {
-      url: "https://polygon-mumbai.infura.io/v3/$(projectId)",
+      url: "https://polygon-mumbai.g.alchemy.com/v2/AtOzoQZYwB9dzzIaC0485kEGXT6QxI5j",
       accounts: [privateKey]
     },
     mainnet: {
@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   solidity: {
-    version: "0.8.4",
+    version: "0.8.7",
     settings: {
       optimizer: {
         enabled: true,

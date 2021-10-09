@@ -11,7 +11,7 @@ import Head from 'next/head'
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
 import {
-  nftaddress, nftmarketaddress
+  nftaddress, nftmarketaddress, randomaddress
 } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'

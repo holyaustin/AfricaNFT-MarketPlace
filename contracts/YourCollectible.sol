@@ -1,5 +1,5 @@
-pragma solidity 0.7.5;
 //SPDX-License-Identifier: MIT
+pragma solidity 0.8.7;
 
 //import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -14,7 +14,7 @@ contract YourCollectible is ERC721 {
   Counters.Counter private _tokenIds;
 
   constructor() public ERC721("YourCollectible", "YCB") {
-    _setBaseURI("https://ipfs.io/ipfs/");
+   // _setBaseURI("https://ipfs.io/ipfs/");
   }
 
   function mintItem(address to, string memory tokenURI)
@@ -25,7 +25,7 @@ contract YourCollectible is ERC721 {
 
       uint256 id = _tokenIds.current();
       _mint(to, id);
-      _setTokenURI(id, tokenURI);
+      //_setTokenURI(id, tokenURI);
 
       return id;
   }
