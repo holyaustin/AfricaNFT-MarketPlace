@@ -1,4 +1,4 @@
-# An African NFT marketplace 
+AfricaNFT
 
 
 An African NFT marketplace for minting and selling of digital assets.
