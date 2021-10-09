@@ -1,6 +1,12 @@
 /* test/sample-test.js */
 describe("NFTMarket", function() {
   it("Should create and execute market sales", async function() {
+   /* deploy the Chainlink randomness */
+   const RandNum = await ethers.getContractFactory("RandomNumberConsumer")
+   const randnum = await RandNum.deploy()
+   await randnum.deployed()
+   const randnumAddress = randnum.address
+   
     /* deploy the marketplace */
     const Market = await ethers.getContractFactory("NFTMarket")
     const market = await Market.deploy()
@@ -19,8 +25,8 @@ describe("NFTMarket", function() {
     const auctionPrice = ethers.utils.parseUnits('100', 'ether')
 
     /* create two tokens */
-    await nft.createToken("https://www.mytokenlocation.com")
-    await nft.createToken("https://www.mytokenlocation2.com")
+    await nft.createToken("https://www.africanft.com")
+    await nft.createToken("https://www.africanft2.com")
 
     /* put both tokens for sale */
     await market.createMarketItem(nftContractAddress, 1, auctionPrice, { value: listingPrice })

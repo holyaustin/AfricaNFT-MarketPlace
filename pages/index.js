@@ -74,15 +74,14 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head> 
   <>
-  <Image
+  <div> 
+  <Image 
     src={banner}
     alt="AfricaNFT site"
-    // width={500} automatically provided
-    height={500} //automatically provided
-    // blurDataURL="data:..." automatically provided
-    // Optionally allows to add a blurred version of the image while loading
-    // placeholder="blur"
+    height={400} //automatically provided
+    width={1360}
   />
+   </div> 
   <p className="text-center text-2xl mb-4 font-bold text-black font-sans">Explore our New Collectibles</p>
   </>
 

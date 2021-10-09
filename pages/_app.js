@@ -48,6 +48,11 @@ function MyApp({ Component, pageProps }) {
               List My NFT Assets
             </a>
           </Link>
+          <Link href="/random">
+            <a className="mr-6 text-pink-500">
+              Random generated Assets
+            </a>
+          </Link>
           <Link href="/lazy-mint">
             <a className="mr-6 text-pink-500">
               Lazy Mint Assets
@@ -58,7 +63,6 @@ function MyApp({ Component, pageProps }) {
               IPFS Upload
             </a>
           </Link>
-          
           <Link href="/creator-dashboard">
             <a className="mr-6 text-pink-500">
               Creator Dashboard
